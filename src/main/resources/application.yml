@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /thycase
+
+logging:
+  level:
+    org:
+      springframework.web: DEBUG
+      hibernate: DEBUG
+
+spring:
+  application:
+    name: thycase
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:file:~/thycaseDB;LOCK_MODE=1
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+
+transportationCacheTTL: 1
